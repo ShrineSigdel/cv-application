@@ -64,8 +64,15 @@ export default function App() {
     }]);
   }
 
+  function clearResume() {
+    setPerson({});
+    setEducation([]);
+    setExperience([]);
+  }
+
   return (
     <>
+      <button className="clear btn" onClick={clearResume}>Clear Resume</button>
       <div className="form-container">
         <PersonalForm addPerson={addPerson} />
         <EducationForm addEducation={addEducation} />
