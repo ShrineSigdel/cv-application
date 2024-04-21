@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+	--primary-color: #0a0829; /*text and buttons; */
+	--secondary-color: #1de9b6; /*background */
+	--primary-font: 'Open Sans';
+	--secondary-font: 'Playfair Display SC';
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: var(--primary-font), sans-serif;
+	font-size: 0.8rem;
+	position: relative;
+	color: var(--primary-color);
+}
+
+/* Reset form elements */
+ul {
+	list-style: none;
+}
+
+input,
+textarea,
+button {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	font: inherit;
+}
+
+#root {
+	grid-template-columns: 1fr minmax(300px, 1fr);
+	gap: 25px;
+	display: grid;
+	padding: 2em;
+	padding-top: 5em;
+	justify-items: center;
+}
+
+.form-container {
+	grid-template-columns: repeat(auto-fill, 300px);
+	gap: 30px;
+	width: 100%;
+	grid-column: 1;
+	display: grid;
+	margin-right: 1em;
+	height: 450px;
+}
+
+.form-container > * {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid var(--primary-color);
+	border-radius: 15px;
+	padding: 1em;
+	margin-top: 2em;
+}
+
+.form-title {
+	font-family: var(--secondary-font);
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 1.2px;
+	margin-bottom: 0.5em;
+}
+
+input {
+	box-shadow: inset #abacaf 0 0 0 2px;
+	border: 0;
+	appearance: none;
+	width: 90%;
+	position: relative;
+	border-radius: 3px;
+	padding: 9px 12px;
+	line-height: 1.4;
+	color: rgb(0, 0, 0);
+	font-weight: 400;
+	transition: all 0.2s ease;
+}
+
+input:hover {
+	box-shadow: 0 0 0 0 #fff inset, #1de9b6 0 0 0 2px;
+}
+
+input:focus {
+	background: #fff;
+	outline: 0;
+	box-shadow: 0 0 0 0 #fff inset, #1de9b6 0 0 0 3px;
+}
+
+label {
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-right: auto;
+	margin-left: 5%;
+}
+
+.btn {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	font-weight: 600;
+	border-radius: 3px;
+	padding: 12px 24px;
+	border: 0;
+	color: #000021;
+	background: #1de9b6;
+	line-height: 1.15;
+}
+.btn:hover {
+	transition: all 0.1s ease;
+	box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+}
+
+.submit.btn {
+	margin-top: 1em;
+}
+
+.personal-form > *,
+.education-form > *,
+.experience-form > * {
+	margin-top: 7px;
+}
+
+.curriculum-vitae {
+	display: grid;
+	grid-template-rows: 150px 1fr 1fr;
+	width: 17.5cm;
+	height: 24.75cm;
+	border: 2px solid var(--primary-color);
+}
+
+.personal-details {
+	padding: 1em;
+	display: grid;
+	grid-template: repeat(4, 1fr) / 1fr 1fr;
+	background: var(--primary-color);
+	color: var(--secondary-color);
+}
+
+.personal-details .name {
+	grid-column: 1;
+	grid-row: span 4;
+	color: white;
+	align-items: center;
+	display: flex;
+	font-size: 1.8rem;
+	font-family: var(--secondary-font);
+	justify-content: center;
+}
+
+.personal-details > * {
+	margin-bottom: 1em;
+}
+
+svg {
+	margin-right: 0.5em;
+}
+
+.educational-details,
+.experience-details {
+	padding: 1em;
+	display: grid;
+	grid-template: 1fr / 1.5fr 3fr;
+	justify-items: center;
+}
+
+.details-container {
+	box-sizing: border-box;
+	padding: 1em;
+	margin-top: 3em;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.details-container-row {
+	display: grid;
+	grid-template: 1fr / 1fr 1fr;
+	margin-top: 1em;
+}
+
+.educational-details .title,
+.experience-details .title {
+	font-family: var(--secondary-font);
+	font-size: 1.2rem;
+	font-weight: 600;
+	grid-column: 1;
+	text-decoration: underline;
+}
+
+.dates {
+	font-weight: 600;
+}
+
+.educational-details .institute,
+.experience-details .company {
+	font-weight: 600;
+	font-size: 0.9rem;
+}
