@@ -147,7 +147,7 @@ label {
 
 .curriculum-vitae {
 	display: grid;
-	grid-template-rows: 150px 1fr 1fr;
+	grid-template-rows: 170px 1fr 1fr;
 	width: 17.5cm;
 	height: 24.75cm;
 	border: 2px solid var(--primary-color);
